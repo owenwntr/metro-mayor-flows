@@ -7,7 +7,7 @@ library(ggalluvial)
 library(dplyr)
 library(pollster)
 
-bes <- read_dta("/Users/owenwinter/Documents/BES2019_W21_Panel_v21.0.dta")
+bes <- read_dta("BES2019_W21_Panel_v21.0.dta")
 bes$onscode <- constid(bes$panoW21, "pa_id", "ons_id", warn = TRUE)
 
 irrelevant_waves <- c("W1","W2","W3","W4","W5","W6","W7","W8","W9","W10","W11",
@@ -163,7 +163,7 @@ plot <- ggplot(freq_lodes, aes(x=x,y=n,stratum=stratum,alluvium=alluvium,fill=st
         axis.title.x = element_blank(),
         panel.grid.major.y = element_blank())
 
-finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="/Users/owenwinter/Documents/Plot Tweets/Metro Mayors/overall.png")
+finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="overall.png")
 
 # LONDON
 
@@ -215,7 +215,7 @@ plot <- ggplot(london_freq_lodes, aes(x=x,y=n,stratum=stratum,alluvium=alluvium,
         axis.title.x = element_blank(),
         panel.grid.major.y = element_blank())
 
-finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="/Users/owenwinter/Documents/Plot Tweets/Metro Mayors/london.png")
+finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="london.png")
 
 #West Mids Mayoral
 
@@ -266,7 +266,7 @@ plot <- ggplot(westmids_freq_lodes, aes(x=x,y=n,stratum=stratum,alluvium=alluviu
         axis.title.x = element_blank(),
         panel.grid.major.y = element_blank())
 
-finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="/Users/owenwinter/Documents/Plot Tweets/Metro Mayors/westmids.png")
+finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="westmids.png")
 
 #Greater Manchester Mayoral
 
@@ -319,7 +319,7 @@ plot <- ggplot(gm_freq_lodes, aes(x=x,y=n,stratum=stratum,alluvium=alluvium,fill
         axis.title.x = element_blank(),
         panel.grid.major.y = element_blank())
 
-finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="/Users/owenwinter/Documents/Plot Tweets/Metro Mayors/gm.png")
+finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="gm.png")
 
 #West Yorkshire Mayoral
 
@@ -373,4 +373,4 @@ plot <- ggplot(westYork_freq_lodes, aes(x=x,y=n,stratum=stratum,alluvium=alluviu
         axis.title.x = element_blank(),
         panel.grid.major.y = element_blank())
 
-finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="/Users/owenwinter/Documents/Plot Tweets/Metro Mayors/westYork.png")
+finalise_plot(plot, "Data from British Election Study (2021)", save_filepath="westYork.png")
